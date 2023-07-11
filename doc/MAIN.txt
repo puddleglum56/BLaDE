@@ -10,7 +10,18 @@ To get started quickly, see some of the example files in test/*/input
 
 III. Compilation
 
-BLaDE is designed to run on GPUs, and should be compiled with an appropriate c++ compiler and cuda (minimum version 9). BLaDE parallelization is managed with OpenMP, so that library should also be available. BLaDE is compiled using cmake. For an example of how to compile blade on a particular cluster, see Compile.sh
+BLaDE is designed to run on GPUs, and should be compiled with an appropriate c++ compiler and cuda (minimum version 9). BLaDE parallelization is managed with OpenMP, so that library should also be available. BLaDE is compiled using cmake. For an example of how to compile blade on a particular cluster, see Compile.sh.
+
+
+III.5. lnx27 Compilation
+
+Add the following to your .bashrc:
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/lib64:$LD_LIBRARY_PATH
+export OMP_NUM_THREADS=1
+
+Save, run 'source .bashrc'
+
+Then you can compile BLaDE with the Compile.sh script
 
 
 IV. Program usage
